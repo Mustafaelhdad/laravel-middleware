@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
+use App\Mail\AnotherMarkDown;
 use App\Mail\MarkDownEmail;
 use App\Mail\TestMail;
 use Illuminate\Support\Facades\Mail;
@@ -23,7 +24,7 @@ Route::get('/', function () {
 });
 
 Route::get('/send', function () {
-    Mail::to("elhdadmustafa@gmail.com")->send(new MarkDownEmail());
+    Mail::to("elhdadmustafa@gmail.com")->send(new AnotherMarkDown());
 
     return response("Email sent!");
 });
