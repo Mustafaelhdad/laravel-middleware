@@ -1,7 +1,7 @@
 <x-mail::message>
-# Introduction
+# مرحبا بك {{$user->name}}
 
-The body of your message.
+نورت موقعنا الفشيخ
 
 <x-mail::button :url="''">
 Button Text

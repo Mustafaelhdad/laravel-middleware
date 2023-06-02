@@ -23,11 +23,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/send', function () {
-    Mail::to("elhdadmustafa@gmail.com")->send(new AnotherMarkDown());
+// Route::get('/send', function () {
+//     Mail::to("elhdadmustafa@gmail.com")->send(new AnotherMarkDown());
 
-    return response("Email sent!");
-});
+//     return response("Email sent!");
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
