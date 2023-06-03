@@ -22,8 +22,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        User::created(function($user) {
-            Mail::to($user)->send(new AnotherMarkDown($user));
-        });
+        // User::created(function($user) {
+        //     Mail::to($user)->send(new AnotherMarkDown($user));
+        // });
     }
 }
