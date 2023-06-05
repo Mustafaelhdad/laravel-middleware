@@ -39,7 +39,7 @@ class PostController extends Controller
         $users = User::where('id', '!=', auth()->user()->id)->get();
         $post_owner = auth()->user()->name;
 
-        Notification::send($users, new CreatePost($post->id, $post_owner));
+        Notification::send($users, new CreatePost($post->id, $post_owner, $post->title));
 
         return redirect()->route('dashboard');
     }

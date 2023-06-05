@@ -16,11 +16,13 @@ class CreatePost extends Notification
      */
     private $post_id;
     private $post_owner;
+    private $title;
 
-    public function __construct($post_id, $post_owner)
+    public function __construct($post_id, $post_owner, $title)
     {
         $this->post_id = $post_id;
         $this->post_owner = $post_owner;
+        $this->title = $title;
     }
 
     /**
@@ -38,6 +40,7 @@ class CreatePost extends Notification
         return [
             'post_id'=>$this->post_id,
             'post_owner'=>$this->post_owner,
+            'title'=>$this->title,
             // 'post_owner'=>auth()->user()->name,
         ];
     }
