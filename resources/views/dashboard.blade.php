@@ -60,7 +60,7 @@
             <div class="col-lg-8 col-sm-8 col-8">
                 <strong class="text-info">{{$notification->data['post_owner']}}</strong>
             <div>
-            {{$notification->data['title']}}
+            <a href="{{route('posts.show', $notification->data['post_id'])}}">{{$notification->data['title']}}</a>
             </div>
                 <small class="text-warning">{{$notification->created_at}}</small>
             </div>
