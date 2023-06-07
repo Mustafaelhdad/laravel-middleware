@@ -7,6 +7,7 @@ use App\Mail\MarkDownEmail;
 use App\Mail\TestMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+use PHPUnit\Framework\Attributes\PostCondition;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,5 +42,6 @@ Route::middleware('auth')->group(function () {
 
 // Route::get('/posts', [PostController::class, 'index'])->middleware('check_user');
 Route::resource('posts', PostController::class);
+Route::get('notification/mark-as-read', [PostController::class, 'markAsRead'])->name('notification.mark');
 
 require __DIR__.'/auth.php';
