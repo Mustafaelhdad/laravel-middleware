@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\anotherTestController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestController;
@@ -46,5 +47,6 @@ Route::resource('posts', PostController::class);
 Route::get('notification/mark-as-read', [PostController::class, 'markAsRead'])->name('notification.mark');
 
 Route::get('test', [TestController::class, 'index']);
+Route::get('anothertest', [anotherTestController::class, 'index']);
 
 require __DIR__.'/auth.php';

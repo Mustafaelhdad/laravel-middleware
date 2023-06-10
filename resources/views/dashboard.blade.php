@@ -106,7 +106,8 @@ Lorem ipsum dolor sit amet, consectetur
 </nav>
 </div>
 </div>
-<h3>You're logged in!: {{username()}}</h3>
+<h1>You're logged in!: {{username()}}</h1>
+<h3>You're logged in!: {{user_id()}}</h3>
 </div>
 </body>
 </x-app-layout>
