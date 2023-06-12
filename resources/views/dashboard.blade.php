@@ -106,6 +106,7 @@ Lorem ipsum dolor sit amet, consectetur
 </nav>
 </div>
 </div>
+<p>working with the queue</p>
 <h1>You're logged in!: {{username()}}</h1>
 <h3>You're logged in!: {{user_id()}}</h3>
 </div>
