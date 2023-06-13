@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\User::truncate();
         \App\Models\Post::truncate();
-        \App\Models\User::factory(50)->create();
+        \App\Models\User::factory(10000)->create();
         \App\Models\Post::factory(50)->create();
 
         // \App\Models\User::factory()->create([

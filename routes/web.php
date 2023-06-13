@@ -4,6 +4,7 @@ use App\Http\Controllers\anotherTestController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\UserController;
 use App\Mail\AnotherMarkDown;
 use App\Mail\MarkDownEmail;
 use App\Mail\TestMail;
@@ -48,5 +49,7 @@ Route::get('notification/mark-as-read', [PostController::class, 'markAsRead'])->
 
 Route::get('test', [TestController::class, 'index']);
 Route::get('anothertest', [anotherTestController::class, 'index']);
+
+Route::get('users', [UserController::class, 'index']);
 
 require __DIR__.'/auth.php';
