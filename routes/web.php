@@ -51,5 +51,6 @@ Route::get('test', [TestController::class, 'index']);
 Route::get('anothertest', [anotherTestController::class, 'index']);
 
 Route::get('users', [UserController::class, 'index']);
+Route::get('sendmail', [UserController::class, 'sendMail']);
 
 require __DIR__.'/auth.php';
