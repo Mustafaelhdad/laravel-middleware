@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\Framework\Attributes\PostCondition;
 
+use Illuminate\Support\Facades\Storage;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,5 +54,10 @@ Route::get('anothertest', [anotherTestController::class, 'index']);
 
 Route::get('users', [UserController::class, 'index']);
 Route::get('sendmail', [UserController::class, 'sendMail']);
+
+Route::get ('storage', function() {
+    Storage::disk('local')->put('example.txt', 'Content');
+    return "OK";
+});
 
 require __DIR__.'/auth.php';
