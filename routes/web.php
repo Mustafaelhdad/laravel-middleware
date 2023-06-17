@@ -4,6 +4,7 @@ use App\Http\Controllers\anotherTestController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\UploadImg;
 use App\Http\Controllers\UserController;
 use App\Mail\AnotherMarkDown;
 use App\Mail\MarkDownEmail;
@@ -59,5 +60,8 @@ Route::get ('storage', function() {
     Storage::disk('local')->put('example.txt', 'Content');
     return "OK";
 });
+
+Route::get('show', [UploadImg::class, 'showForm']);
+Route::post('store', [UploadImg::class, 'store'])->name('photo.save');
 
 require __DIR__.'/auth.php';
