@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use App\Traits\UploadImagesTrait;
 use Illuminate\Http\Request;
 
@@ -14,6 +15,11 @@ class UploadImg extends Controller
     }
 
     public function store(Request $request) {
-        return $this->uploadImage($request, 'admins');
+        $path = $this->uploadImage($request, 'users');
+        Image::create([
+            'path' => $path
+        ]);
+
+        return "upload OK";
     }
 }
