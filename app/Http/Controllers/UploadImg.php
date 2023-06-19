@@ -10,6 +10,11 @@ class UploadImg extends Controller
 {
     use UploadImagesTrait;
 
+    public function index() {
+        $images = Image::all();
+        return view('images', compact('images'));
+    }
+
     public function showForm() {
         return view('upload');
     }

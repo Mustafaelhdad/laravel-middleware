@@ -62,6 +62,7 @@ Route::get ('storage', function() {
 });
 
 Route::get('show', [UploadImg::class, 'showForm']);
+Route::get('show/image', [UploadImg::class, 'index']);
 Route::post('store', [UploadImg::class, 'store'])->name('photo.save');
 
 require __DIR__.'/auth.php';
